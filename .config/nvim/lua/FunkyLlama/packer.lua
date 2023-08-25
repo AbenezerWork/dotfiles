@@ -68,6 +68,8 @@ return require('packer').startup(function(use)
         end
     }
 
+    use('windwp/nvim-ts-autotag')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
