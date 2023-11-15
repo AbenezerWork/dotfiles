@@ -1,4 +1,5 @@
 # i3 config file (v4)
+
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 # Set mod key (Mod1=<Alt>, Mod4=<Super>)
@@ -8,7 +9,7 @@ set $mod Mod4
 # workspace_layout tabbed <stacking|tabbed>
 
 # Configure border style <normal|1pixel|pixel xx|none|pixel>
-default_border pixel 1
+default_border pixel 0
 default_floating_border normal
 
 # Hide borders
@@ -39,8 +40,8 @@ bindsym $mod+z exec --no-startup-id morc_menu
 ## sound-section - DO NOT EDIT if you wish to automatically upgrade Alsa -> Pulseaudio later! ##
 ################################################################################################
 
-#exec --no-startup-id volumeicon
-#bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
+##exec --no-startup-id volumeicon
+##bindsym $mod+Ctrl+m exec terminal -e 'alsamixer'
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id pa-applet
 bindsym $mod+Ctrl+m exec pavucontrol
@@ -65,6 +66,7 @@ bindsym Print exec --no-startup-id i3-scrot
 bindsym $mod+Print --release exec --no-startup-id i3-scrot -w
 bindsym $mod+Shift+Print --release exec --no-startup-id i3-scrot -s
 bindsym $mod+Ctrl+x --release exec --no-startup-id xkill
+# bindsym $mod+Shift+i exec insync start
 focus_follows_mouse no
 
 # change focus
@@ -134,14 +136,14 @@ bindsym $mod+Ctrl+Left workspace prev
 # to display names or symbols instead of plain workspace numbers you can use
 # something like: set $ws1 1:mail
 #                 set $ws2 2:
-set $ws1 ""
-set $ws2 ""
-set $ws3 ""
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
 set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 ""
+set $ws8 "8"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -372,8 +374,8 @@ bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border       backgr.   text    indic.   child_border
-  client.focused          $red         $green    $red    #FDF6E3
-  client.focused_inactive $lavender    $red      $text   #FDF6E3
+  client.focused          $base        $surface1   $red    #FDF6E3
+  client.focused_inactive $lavender    #000      $text   #FDF6E3
   client.unfocused        $overlay0    $base     $text   #FDF6E3
   client.urgent           #CB4B16      $red      $base   #268BD2
   client.placeholder      #000000      $red   #ffffff #000000 

@@ -26,6 +26,7 @@ return require('packer').startup(function(use)
         "windwp/nvim-autopairs",
         config = function() require("nvim-autopairs").setup {} end
     }
+    use "rafamadriz/friendly-snippets"
     use({
         "jose-elias-alvarez/null-ls.nvim",
         config = function()
@@ -70,6 +71,8 @@ return require('packer').startup(function(use)
 
     use('windwp/nvim-ts-autotag')
 
+    use('p00f/cphelper.nvim')
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v2.x',
@@ -90,4 +93,5 @@ return require('packer').startup(function(use)
             { 'L3MON4D3/LuaSnip' }, -- Required
         }
     }
+    use "nvim-lua/plenary.nvim"
 end)
