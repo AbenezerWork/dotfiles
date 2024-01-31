@@ -1,0 +1,95 @@
+{
+	"competitive setup1": {
+		"prefix": "bare",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"",
+			"using namespace std;",
+			"",
+			"typedef long long ll;",
+			"typedef vector<int> vi;",
+			"typedef pair<int, int> pii;",
+			"#define endl '\\n'",
+			"",
+			"",
+			"int main() {",
+			"  ios::sync_with_stdio(0);",
+			"  cin.tie(0);",
+			"",
+			"",
+			"  return 0;",
+			"}"
+		]
+	},
+	"competitive setup2": {
+		"prefix": "testcases",
+		"body": [
+			"#include <bits/stdc++.h>",
+			"",
+			"using namespace std;",
+			"",
+			"typedef long long ll;",
+			"typedef vector<int> vi;",
+			"typedef pair<int, int> pii;",
+			"#define endl '\\n'",
+
+			"",
+			"",
+			"void solve() {",
+
+			"",
+			"}",
+			"",
+			"",
+
+			"int main() {",
+			"  ios::sync_with_stdio(0);",
+			"  cin.tie(0);",
+			"",
+			"  int t;cin>>t;",
+			"  while(t--){solve();}",
+			"",
+			"  return 0;",
+			"}"
+		]
+	},
+	"debug templates": {
+		"prefix": "printrange",
+		"body": [
+			"template <typename T>",
+			"void print_range_based(const T& container) {",
+			"\tfor (const auto& elem : container) {",
+			"\t\tstd::cout << elem << \" \";",
+			"\t}",
+			"\tstd::cout << std::endl;",
+			"}"
+		]
+	},
+
+	"debug templates": {
+		"prefix": "printit",
+		"body": [
+			"template <typename T>",
+			"void print_iterator_based(const T& container) {",
+			"\tfor (typename T::const_iterator it = container.begin(); it != container.end(); ++it) {",
+			"\t\tstd::cout << *it << \" \";",
+			"\t}",
+			"\tstd::cout << std::endl;",
+			"}"
+		]
+	},
+	"debug templates": {
+		"prefix": "couter",
+		"body": [
+			"template <typename T>",
+			"std::ostream& operator<<(std::ostream& os, const std::vector<T>& vec) {",
+			"os << \"[ \";",
+			"for (const T& elem : vec) {",
+			"os << elem << \" \";",
+			"}",
+			"os << \"]\";",
+			"return os;",
+			"}"
+		]
+	}
+}
