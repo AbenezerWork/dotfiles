@@ -15,17 +15,19 @@ fi
 
 #Adding gopath to path
 export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:/home/aztral/.cargo/bin
 
 # Function to create a directory and navigate into it
 mkcd() {
   mkdir -p "$1" && cd "$1"
 }
 
+
 # General Aliases
-alias ..="cd .."
-alias ...="cd ../.."
-alias ....="cd ../../.."
-alias ~="cd ~"
+# alias ..="cd .."
+# alias ...="cd ../.."
+# alias ....="cd ../../.."
+# alias ~="cd ~"
 alias c="clear"
 
 # Listing files
@@ -36,8 +38,8 @@ alias l="ls -CF"
 alias lt="ls --tree"
 
 # Quick edit and source .zshrc
-alias e='nano ~/.zshrc'
-alias zshconfig="nano ~/.zshrc"
+alias e='nvim ~/.zshrc'
+alias zshconfig="nvim ~/.zshrc"
 alias reload="source ~/.zshrc"
 
 # Common commands with sudo
@@ -62,7 +64,7 @@ alias gbd="git branch -d"
 alias gm="git merge"
 
 # File management
-alias cp="cp -i"
+# alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 alias mkdir="mkdir -p"
@@ -81,3 +83,5 @@ alias meminfo="free -m -l -t"
 alias cpuinfo="lscpu"
 
 alias ls="lsd"
+
+eval "$(zoxide init --cmd cd zsh)"

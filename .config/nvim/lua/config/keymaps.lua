@@ -28,8 +28,9 @@ keymap.set("n", "<C-w><right>", "<C-w>>")
 keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 
---Colorscheme picker
+--telescope keymaps
 keymap.set("n", "<leader>C", ":Telescope colorscheme<Return>")
+keymap.set("n", "<leader>fs", ":Telescope lsp_document_symbols<Return>")
 
 --CompetiTest
 vim.keymap.set("n", "<leader>rt", ":CompetiTest receive testcases<CR>")
