@@ -31,11 +31,12 @@ mkcd() {
 alias c="clear"
 
 # Listing files
-alias ll="ls -l"
-alias la="ls -a"
-alias lla="ls -la"
-alias l="ls -CF"
-alias lt="ls --tree"
+alias ls="lsd"
+alias ll="lsd -l"
+alias la="lsd -a"
+alias lla="lsd -la"
+alias l="lsd -CF"
+alias lt="lsd --tree"
 
 # Quick edit and source .zshrc
 alias e='nvim ~/.zshrc'
@@ -50,6 +51,7 @@ alias update="sudo apt update && sudo apt upgrade"
 alias g="git"
 alias ga="git add"
 alias gaa="git add --all"
+alias gau="git add -u"
 alias gc="git commit"
 alias gcm="git commit -m"
 alias gca="git commit --amend"
@@ -82,6 +84,8 @@ alias top="htop"
 alias meminfo="free -m -l -t"
 alias cpuinfo="lscpu"
 
-alias ls="lsd"
 
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+fastfetch
