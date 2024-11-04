@@ -9,13 +9,18 @@ keymap.set("i", "<C-J>", 'copilot#Accept("\\<CR>")', {
     replace_keycodes = false,
 })
 vim.g.copilot_no_tab_map = true
+
+keymap.set("n", "<leader>E", ":Ex<CR>")
+
 -- New tab
 keymap.set("n", "te", ":tabedit<Return>")
 keymap.set("n", "<tab>", ":tabnext<Return>", opts)
 keymap.set("n", "<s-tab>", ":tabprev<Return>", opts)
+
 -- Split window
 keymap.set("n", "ss", ":split<Return>", opts)
 keymap.set("n", "sv", ":vsplit<Return>", opts)
+
 -- Move window
 keymap.set("n", "sh", "<C-w>h")
 keymap.set("n", "sk", "<C-w>k")
