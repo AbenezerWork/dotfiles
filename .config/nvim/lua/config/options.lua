@@ -2,7 +2,9 @@
 -- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 -- Add any additional options here
 
-vim.opt.guicursor = ""
+vim.opt.guicursor = "n-v-c-i-ci-ve:block"
+
+vim.opt.background = "light"
 
 vim.opt.nu = true
 vim.opt.relativenumber = true
